@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciar Rastreios</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 8px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f4f4f4; }
+        input { padding: 6px; margin: 4px; }
+        button { padding: 6px 12px; }
+        footer { margin-top: 30px; font-size: 12px; color: #555; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>📦 Gerenciamento de Rastreios</h1>
+
+    <form action="/adicionar" method="post">
+        <input type="text" name="nome" placeholder="Nome da Vendedora" required>
+        <input type="text" name="numero" placeholder="Número WhatsApp (com DDI)" required>
+        <input type="text" name="codigo" placeholder="Código de Rastreio" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Lista de rastreios:</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Número</th>
+            <th>Código</th>
+            <th>Ações</th>
+        </tr>
+        {% for nome, contatos in dados.items() %}
+            {% for numero, codigo in contatos.items() %}
+            <tr>
+                <td>{{ nome }}</td>
+                <td>{{ numero }}</td>
+                <td>{{ codigo }}</td>
+                <td><a href="/remover/{{ nome }}/{{ numero }}">Remover</a></td>
+            </tr>
+            {% endfor %}
+        {% endfor %}
+    </table>
+
+    <footer>
+        © 2025 - Sistema de Rastreamento de Encomendas via WhatsApp<br>
+        Desenvolvido por Íkaro Henrique Marçal Alexandre e Matheus Kioshi Fernandes Numata. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
