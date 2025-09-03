@@ -51,6 +51,8 @@ def remover(nome, numero):
     dados = carregar_dados()
     if nome in dados and numero in dados[nome]:
         del dados[nome][numero]
+        if not dados[nome]:
+            del dados[nome]
         salvar_dados(dados)
     return redirect("/")
 
