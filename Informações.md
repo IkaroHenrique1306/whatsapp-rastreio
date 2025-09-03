@@ -1,4 +1,4 @@
------------------ Sistema de Rastreamento de Encomendas via WhatsApp -----------------
+----------------- istema de Rastreamento de Encomendas via WhatsApp -----------------
                                                                      
 
 Este projeto permite o acompanhamento automático de encomendas utilizando o WhatsApp como canal de notificação. Desenvolvido para pequenas equipes de vendas, ele integra a API do Wonca Labs para consulta de status de rastreio e envia atualizações diretam aos clientes ou responsáveis via WhatsApp Web.
