@@ -17,13 +17,13 @@ Sistema de registro de histórico de envios e status atualizados.
 
 ----------------- Tecnologias utilizadas -----------------
 
-Python 3.x
+Python 3.13
 
 Flask (para interface web)
 
 Selenium WebDriver (para automação do WhatsApp Web)
 
-HTML/CSS (interface de gerenciamento)
+HTML (interface de gerenciamento)
 
 API Wonca Labs
 
